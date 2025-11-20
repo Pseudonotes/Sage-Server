@@ -4,9 +4,9 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # System deps required by some libraries (adjust as needed)
-RUN apt-get update && \
-    apt-get install -y build-essential git ffmpeg libsndfile1 && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && \
+#     apt-get install -y build-essential git ffmpeg libsndfile1 && \
+#     rm -rf /var/lib/apt/lists/*
 
 # Copy and install python deps
 COPY requirements.txt /app/requirements.txt
